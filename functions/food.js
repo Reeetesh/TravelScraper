@@ -7,7 +7,7 @@ module.exports = async function food(location) {
   }
   try {
     const browser = await puppeteer.launch({
-      executablePath: "/usr/bin/chromium-browser",
+      headless: true, args: ['--no-sandbox']
     });
     const page = await browser.newPage();
     var URL3 = `https://restaurant-guru.in/${location}#restaurant-list`;
