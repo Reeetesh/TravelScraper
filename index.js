@@ -2,7 +2,7 @@ const express = require("express");
 const puppeteer = require("puppeteer");
 const app = express();
 const poi = require("./functions/poi");
-const hotels = require(".//functions/hotels");
+const hotels = require("./functions/hotels");
 const food = require("./functions/food");
 var cors = require("cors");
 app.use(express.urlencoded({ extended: false }));
