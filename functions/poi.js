@@ -3,10 +3,8 @@ let obj = require("../data/object")
 
 module.exports = async function (location) {
   try {
-    const browser = await puppeteer.launch({
-      executablePath: "/usr/bin/chromium-browser",
-      
-    });
+    const browser = await puppeteer.launch({headless: true, args: ['--no-sandbox']});
+   
     const page = await browser.newPage();
     await page.goto(
       `https://www.holidify.com/places/${location}/sightseeing-and-things-to-do.html`
